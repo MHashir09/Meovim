@@ -116,6 +116,7 @@ keymap("n", "<C-k>", "<C-w>k", s) -- move to split above
 keymap("v", "<Leader>p", '"_dP', s) -- paste over selected text without losing the afore-copied text
 keymap("n", "<Leader>_", "<cmd>vsplit<CR>", s) -- split the window vertically
 keymap("n", "<Leader>-", "<cmd>split<CR>", s) -- split the window horizontally
+keymap("n", "<leader>up", '<cmd>lua vim.pack.update()<CR>') -- updates vim.pack packages
 
 
 keymap("n", "j", function()
