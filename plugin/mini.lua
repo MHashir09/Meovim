@@ -26,7 +26,6 @@ require("mini.statusline").setup({
 
 require("mini.pairs").setup()    -- auto close brackets and quotes
 require("mini.comment").setup()  -- gcc to comment line, gc in visual mode (same to uncomment)
-require("mini.surround").setup() -- sa(add) sd(delete) sr(replace) surround e.g. saiw" = "word"
 require("mini.move").setup() -- move lines or selections around with Alt+hjkl
 require("mini.animate").setup() -- smooth scrolling and cursor animations
 require("mini.indentscope").setup() -- shows a line indicating current indent scope
