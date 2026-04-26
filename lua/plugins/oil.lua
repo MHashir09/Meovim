@@ -17,7 +17,7 @@ return {
             }
         })
         -- // Keymap to toggle oil
-        vim.keymap.set("n", "f", function()
+        vim.keymap.set("n", "e", function()
             local oil = require("oil")
             if oil.get_current_dir() then
                 oil.close()
