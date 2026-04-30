@@ -2,6 +2,7 @@
 
 return {
     "goolord/alpha-nvim",
+    dependencies = { "ibhagwan/fzf-lua" },
     config = function()
         local dashboard = require("alpha.themes.dashboard")
 
