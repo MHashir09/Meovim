@@ -122,3 +122,153 @@ You can add or remove servers by editing `lua/plugins/mason.lua`.
 > Run `:Mason` inside Neovim to manage servers manually — browse, install, update, or remove.
 
 ---
+
+<a id="Keymaps"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=9A9A9A&vCenter=true&width=435&height=25&lines=KEYBINDS+REFERENCE" width="450"/>
+
+> [!NOTE]
+> The `leader` key is set to `space`. You can use `<space>k` to fuzzy search for a specific keymap. Also, you can change any keybind to whatever you desire.
+
+### Global Keymaps (`global-keymaps.lua`)
+
+| Key | Mode | Description |
+|---|---|---|
+| `<Space>` | Normal | Disable space (leader key) |
+| `jk` | Insert | Exit insert mode |
+| `sa` | Normal | Select all |
+| `<C-d>` | Normal | Scroll down and center |
+| `<C-u>` | Normal | Scroll up and center |
+| `<C-h>` | Normal | Move to left split |
+| `<C-l>` | Normal | Move to right split |
+| `<C-j>` | Normal | Move to split below |
+| `<C-k>` | Normal | Move to split above |
+| `<Leader>p` | Visual | Paste without overwriting register |
+| `<Leader>_` | Normal | Vertical split |
+| `<Leader>-` | Normal | Horizontal split |
+| `j` | Normal | Move down (visual lines) |
+| `k` | Normal | Move up (visual lines) |
+| `<Leader>f` | Normal | Format buffer |
+| `<leader>b` | Normal | Open file in browser |
+| `<Space>` | Terminal | Space in terminal mode |
+| `<Leader>t` | Normal | Toggle terminal |
+| `jk` | Terminal | Exit terminal mode |
+| `<C-h>` | Terminal | Move to left split |
+| `<C-j>` | Terminal | Move to split below |
+| `<C-k>` | Terminal | Move to split above |
+| `<C-l>` | Terminal | Move to right split |
+| `<Leader>_` | Terminal | New terminal in vertical split |
+
+
+### Alpha (Dashboard) (`plugins/alpha.lua`)
+
+| Key | Description |
+|---|---|
+| `f` | Find file |
+| `n` | New file |
+| `p` | Projects |
+| `r` | Recent files |
+| `q` | Quit |
+
+
+### Blink.cmp (Completion) (`plugins/blink.lua`)
+
+| Key | Description |
+|---|---|
+| `<C-y>` | Toggle completion / show docs |
+| `<C-n>` | Select and accept |
+| `<C-k>` | Select previous item |
+| `<C-j>` | Select next item |
+| `<C-b>` | Scroll documentation down |
+| `<C-f>` | Scroll documentation up |
+| `<C-l>` | Next snippet placeholder |
+| `<C-h>` | Previous snippet placeholder |
+| `<CR>` | Accept and enter (cmdline) |
+
+
+### Bufferline (`plugins/bufferline.lua`)
+
+| Key | Description |
+|---|---|
+| `<A-1>` to `<A-9>` | Go to buffer 1-9 |
+| `<A-0>` | Go to last buffer |
+| `<leader>bp` | Pin buffer |
+| `<leader>bd` | Close buffer |
+| `<leader>br` | Close buffers to the right |
+| `<leader>bl` | Close buffers to the left |
+
+
+### Fzf-lua (`plugins/fzf.lua`)
+
+#### Global keymaps
+
+| Key | Description |
+|---|---|
+| `<C-f>` | Find files |
+| `<C-g>` | Live grep |
+| `<leader>k` | Find keymaps |
+| `<leader>h` | Find help |
+| `<leader>fb` | Find buffers |
+
+#### Fzf window keymaps
+
+| Key | Description |
+|---|---|
+| `<C-f>` | Preview page down |
+| `<C-b>` | Preview page up |
+| `<C-p>` | Toggle preview |
+
+#### Fzf navigation
+
+| Key | Description |
+|---|---|
+| `ctrl-a` | Toggle all |
+| `ctrl-t` | Jump to first result |
+| `ctrl-g` | Jump to last result |
+| `ctrl-d` | Half page down |
+| `ctrl-u` | Half page up |
+
+#### File actions
+
+| Key | Description |
+|---|---|
+| `ctrl-q` | Send selection to quickfix |
+| `ctrl-n` | Toggle .gitignore |
+| `ctrl-h` | Toggle hidden files |
+| `enter` | Open file or quickfix |
+
+
+### Oil.nvim (`plugins/oil.lua`)
+
+| Key | Description |
+|---|---|
+| `e` | Toggle oil file explorer |
+| `<CR>` | Open file/directory |
+| `-` | Go up a directory |
+| `_` | Go to current working directory |
+| `g.` | Toggle hidden files |
+| `gp` | Preview file |
+| `q` | Close oil |
+
+
+### Mini.nvim (`plugins/mini.lua`)
+
+| Plugin | Default Keybinds |
+|---|---|
+| `mini.comment` | `gcc` = comment line, `gc` = comment in visual mode |
+| `mini.move` | `Alt+h/j/k/l` = move lines/selection |
+| `mini.pairs` | Auto-close brackets and quotes |
+| `mini.ai` | `a/i` + `a/f/(,),/` text objects (functions, classes, arguments, tags) |
+
+---
+
+<a id="contributing"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=9A9A9A&vCenter=true&width=435&height=25&lines=CONTRIBUTING" width="450"/>
+
+This is a personal config but suggestions are welcome. Feel free to open an issue if you spot something broken or have an idea worth adding. Pull requests are fine too — keep changes focused and explain the reasoning.
+
+---
+
+<a id="postscript"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=9A9A9A&vCenter=true&width=435&height=25&lines=POST+SCRIPT" width="450"/>
+
+If this configuration helps you or you find it worth an appreciation. Please ⭐ this repo, I'd be grateful if you did. `La Pasion` .
