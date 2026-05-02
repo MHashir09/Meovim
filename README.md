@@ -1,65 +1,124 @@
-# A Neovim Configuration
+<div align="center">
 
-This is a simple neovim configuration I made for my personal use. Its my first time creating one, I followed typecraft, primeagen to learn how to configure neovim, so if you also want to make your own, check their individual playlists. I shared this on github and created an installation script because if I lose my config due to some reason, I can easily back it up from here but if you wanna try this just run the installation script below in your terminal but first make sure you meet some few requirements listed below. Thank you for your visit („• ᴗ •„)
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=30&pause=1000&color=9A9A9A&vCenter=true&width=435&height=40&lines=Mhiatic+Meovim" width="450"/>
 
-![Neovim Configuration Demo](./nvim-demo.gif)
+Mhiatic Meovim( Yea meovim, it isn't a typo, I did this intentionally hehe ) is a simple yet powerful Neovim configuration I made for my personal use. It is modern and modular and can be used for professional development. It's a complete rewrite of my first Neovim configuration, but this time with a better and minimal configuration.
 
-## Features
-- LSP support for languages like python, javascript, c and cpp, html and css etc.
-- Linting and formatting support using none-ls
-- File explorer with modern tree navigation
-- Advanced syntax highlighting with Treesitter
-- Auto-completion and snippets
-- Telescope fuzzy finder
-- Beautiful statusline and themes
-- Plugin management with lazy loading
+</div>
 
+https://github.com/user-attachments/assets/c0b4f31c-e72c-4277-ab12-3f34e304b2f6
 
-## Requirements
-- Neovim >= 0.8
-- Git
-- curl
-- Node.js (for LSP servers)
-- Python 3 (for some plugins)
-- Ripgrep (for better search)
-- A stable internet connection
+---
 
-## Installation
+<a id="features"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=9A9A9A&vCenter=true&width=435&height=25&lines=FEATURES" width="450"/>
 
-### Automated Installation
-```bash
-curl -sSL https://raw.githubusercontent.com/Hashir-10/Nvim-config/main/install.sh | bash
+- **Native LSP** via Neovim 0.12's built-in `vim.lsp` — no legacy lspconfig setup
+- **Auto-installing LSP servers** via Mason and mason-lspconfig
+- **Robust completions** via blink.cmp with LSP, path, buffer, and snippet sources
+- **Fuzzy finding** via fzf-lua — files, grep, buffers, keymaps, help
+- **File navigation** via oil.nvim — edit the filesystem like a buffer
+- **Visual buffer tabs** via bufferline with Alt+number switching
+- **Statusline** via mini.statusline — mode, filename, diagnostics, filetype, line:col
+- **Dashboard** via alpha-nvim with custom configuration
+- **Syntax highlighting** via native Treesitter with auto-install
+- **Quality of life modules** via mini.nvim — pairs, comments, move, ai text objects, indent scope
+- **Discord presence** via cord.nvim
+- **Markdown rendering** via markview.nvim
+- **Nice UI** via noice.nvim
+
+---
+
+<a id="structure"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=9A9A9A&vCenter=true&width=435&height=25&lines=STRUCTURE" width="450"/>
+
+```
+~/.config/nvim/
+├── init.lua                    # entry point — bootstraps lazy, loads core modules
+└── lua/
+    ├── vim-options.lua         # editor options (vim.opt)
+    ├── functions-autocmds.lua  # autocmds and shared functions (toggle terminal etc)
+    ├── global-keymaps.lua      # global keybindings
+    └── plugins/
+        ├── alpha.lua           # dashboard
+        ├── blink.lua           # completions
+        ├── bufferline.lua      # buffer tabs
+        ├── colorscheme.lua     # colorscheme (koda.nvim & catppuccin too but it is commented out )
+        ├── fzf.lua             # fuzzy finder
+        ├── mason.lua           # LSP server management
+        ├── mini.lua            # mini.nvim modules
+        ├── miscellaneous.lua   # noice, markview and cord
+        └── oil.lua             # file explorer
 ```
 
-##  Important Notes
-- This installation will backup your existing Neovim config if you have one, so it wont harm your current nvim configuration.
-- After installation, the config becomes independent (no git history)
-- You can safely modify it without affecting this repository
-- If you see some errors from mason after plugin installation it is due to a bad internet connection most probably, if you are sure that your connection is stable then open neovim in `~/.config/nvim` and wait for a while and let mason install everything. If it still fails then retry and it will work eventually.
+---
 
-## Usage
-After installation, simply run:
+<a id="installation"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=9A9A9A&vCenter=true&width=435&height=25&lines=INSTALLATION" width="450"/>
+
+**1. Dependencies**
+
+> [!NOTE]
+> All of the dependencies listed below might be already installed on your system depending on the linux distro you are using but its better to check and install if they aren't already installed. All of these dependencies are crucially required by this config and it may through weird errors if any of these isn't present so make sure to have them all installed.
+
+- **Git**: You can follow these [steps](https://www.theodinproject.com/lessons/foundations-setting-up-git#step-1-install-git) to install git.
+- **Nodejs**: You can follow these [steps](https://www.theodinproject.com/lessons/foundations-installing-node-js#installing-nvm) to install nvm and then install nodejs via it.
+- **Treesitter-cli**: You can install tree-sitter-cli using node-package-manager as: `npm install tree-sitter-cli`.
+- **Rust/Cargo**: You can follow these [steps](https://doc.rust-lang.org/book/ch01-01-installation.html) to install rust and cargo.
+- **Unzip**: You can follow these [steps](https://linuxvox.com/blog/install-unzip-linux/#installing-unzip-on-different-linux-distributions) to install unzip for your linux distribution.
+- *Wget & Curl*: You can follow these [steps](https://www.dotlinux.net/blog/how-to-install-wget-in-linux/#3-installing-wget-on-major-linux-distributions) to install wget and these [steps](https://www.dotlinux.net/blog/how-to-install-curl-in-linux/#1-prerequisites) to install curl for your favorite linux distribution.
+- **Fzf**: You can follow these [steps](https://github.com/junegunn/fzf#installation) to install fzf utility. It is required by FzfLua plugin.
+- **Nerd Font**: You can follow these [steps](https://www.nerdfonts.com/) to download your favorite nerd font. It is necessary for many stuff to show properly.
+- **Neovim**: Finally you can simply install Neovim by using your distro's package manager as: `sudo <your package manager's syntax> neovim` . A `0.12` version Neovim is required for this configuration to work. You can check your Neovim version by: `nvim --version`. If its not 0.12  then your distro does not has 0.12v in its repo's yet. You can uninstall the previously installed Neovim and install it via source by following these [steps](https://github.com/neovim/neovim#install-from-source) .
+
+**2. Clone the config**
+
+```bash
+# Back up existing config if you have one
+mv ~/.config/nvim ~/.config/nvim.bak
+
+# Or create the nvim directory if it doesn't exist already:
+mkdir -p ~/.config/nvim
+
+# Clone the repo
+git clone https://github.com/MHashir09/nvim ~/.config/nvim
+```
+
+**3. Launch Neovim**
+
 ```bash
 nvim
 ```
 
-If you want to learn about vim-motions i.e vim-keybindings then type `:Tutor` in normal mode and it will open an interactive guide for you to learn about vim and vim-motions and covers eveything about vim-motions that you will use in daily development.
+On first launch, lazy.nvim will bootstrap itself and install all plugins automatically. Mason will then install all LSP servers. This may take a minute or two depending on your connection.
 
-## Key Mappings
-- `CTRL + f , in normal mode` - Find files (Telescope)
-- `space + lg , in normal mode` - Live grep search
-- `ALT + 1 or any number , this number represents your tab , works in normal mode` - Change tabs
-- `space + cd , in normal mode` - To close current tab
-- `space + f , in normal mode` - To open or close file explorer
-- `space + e , in normal mode` - To move your cursor from file explorer to current window and vice versa
-- `a, f, d, r` - Type a while in the file explorer to create a new folder or file, type f while in file explorer to find files, type d while in file explorer and while your cursor is set on a file or folder you want to delete to delete that file or folder, type r while in file explorer and while your cursor is set on a file or folder to rename that file or folder
-- `jk, in insert mode` - If you type jk fast consecutively in insert mode you can enter normal mode its a keybind I set for myself because I find pressing esc tiresome everytime, you can still use esc or CTRL + C to enter normal mode.
-
-These are some keybindings I set according to my personal comfort to navigate through projects, you can change them by going to individual plugin files.
-
-##  Customization
-Feel free to modify the configuration files in `~/.config/nvim/` to suit your needs!
-All plugins are in  `~/.config/nvim/lua/plugins` directory, you can add more in this directory or modify the existing ones.
+> [!NOTE]
+> If you see errors on the first launch, simply restart Neovim. Some plugins need to be installed before they can be configured.
 
 ---
-⭐ If you found this niche nvim config nice, please give it a star hehe!
+
+<a id="lsp"></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=9A9A9A&vCenter=true&width=435&height=25&lines=LSP+SERVERS" width="450"/>
+
+The following LSP servers are installed and enabled automatically via Mason:
+
+| Server | Language |
+|---|---|
+| `lua_ls` | Lua |
+| `ts_ls` | TypeScript / JavaScript |
+| `html` | HTML |
+| `cssls` | CSS |
+| `emmet_ls` | HTML / CSS abbreviations |
+| `pyright` | Python |
+| `ruff` | Python (linting) |
+| `rust_analyzer` | Rust |
+| `clangd` | C / C++ |
+| `bashls` | Bash |
+| `eslint` | JavaScript / TypeScript (linting) |
+
+You can add or remove servers by editing `lua/plugins/mason.lua`.
+
+> [!TIP]
+> Run `:Mason` inside Neovim to manage servers manually — browse, install, update, or remove.
+
+---
