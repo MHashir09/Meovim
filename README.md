@@ -11,7 +11,7 @@ Meovim( Yea meovim, it isn't a typo, I did this intentionally hehe ) is a simple
 <br>
 
 <a href="#features"><kbd> <br> Features <br> </kbd></a>&ensp;&ensp;
-<a href="#structure"><kbd> <br> Structure <br> </kbd></a>&ensp;&ensp;
+<a href="#structure"><kbd> <br>  Structure  <br> </kbd></a>&ensp;&ensp;
 <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
 <a href="#lsp"><kbd> <br> LSP <br> </kbd></a>&ensp;&ensp;
 <a href="#keymaps"><kbd> <br> Keymaps <br> </kbd></a>&ensp;&ensp;
@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/c0b4f31c-e72c-4277-ab12-3f34e304b2f6
 - **Treesitter-cli**: You can install tree-sitter-cli using node-package-manager as: `npm install tree-sitter-cli`.
 - **Rust/Cargo**: You can follow these [steps](https://doc.rust-lang.org/book/ch01-01-installation.html) to install rust and cargo.
 - **Unzip**: You can follow these [steps](https://linuxvox.com/blog/install-unzip-linux/#installing-unzip-on-different-linux-distributions) to install unzip for your linux distribution.
-- *Wget & Curl*: You can follow these [steps](https://www.dotlinux.net/blog/how-to-install-wget-in-linux/#3-installing-wget-on-major-linux-distributions) to install wget and these [steps](https://www.dotlinux.net/blog/how-to-install-curl-in-linux/#1-prerequisites) to install curl for your favorite linux distribution.
+- **Wget & Curl**: You can follow these [steps](https://www.dotlinux.net/blog/how-to-install-wget-in-linux/#3-installing-wget-on-major-linux-distributions) to install wget and these [steps](https://www.dotlinux.net/blog/how-to-install-curl-in-linux/#1-prerequisites) to install curl for your favorite linux distribution.
 - **Fzf**: You can follow these [steps](https://github.com/junegunn/fzf#installation) to install fzf utility. It is required by FzfLua plugin.
 - **Nerd Font**: You can follow these [steps](https://www.nerdfonts.com/) to download your favorite nerd font. It is necessary for many stuff to show properly.
 - **Neovim**: Finally you can simply install Neovim by using your distro's package manager as: `sudo <your package manager's syntax> neovim` . A `0.12` version Neovim is required for this configuration to work. You can check your Neovim version by: `nvim --version`. If its not 0.12  then your distro does not has 0.12v in its repo's yet. You can uninstall the previously installed Neovim and install it via source by following these [steps](https://github.com/neovim/neovim#install-from-source) .
