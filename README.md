@@ -1,10 +1,27 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=30&pause=1000&color=9A9A9A&vCenter=true&width=435&height=40&lines=Mhiatic+Meovim" width="450"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=30&pause=1000&color=9A9A9A&vCenter=true&width=435&height=40&lines=MEOVIM+CONFIG" width="450"/>
 
-Mhiatic Meovim( Yea meovim, it isn't a typo, I did this intentionally hehe ) is a simple yet powerful Neovim configuration I made for my personal use. It is modern and modular and can be used for professional development. It's a complete rewrite of my first Neovim configuration, but this time with a better and minimal configuration.
+<br>
+
+Meovim( Yea meovim, it isn't a typo, I did this intentionally hehe ) is a simple yet powerful Neovim configuration I made for my personal use. It is modern and modular and can be used for professional development. It's a complete rewrite of my first Neovim configuration, but this time with a better and minimal configuration.
 
 </div>
+
+<div align="center">
+
+<br>
+
+<a href="#features"><kbd> <br> Features <br> </kbd></a>&ensp;&ensp;
+<a href="#structure"><kbd> <br> Repo-Structure <br> </kbd></a>&ensp;&ensp;
+<a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+<a href="#lsp"><kbd> <br> LSP <br> </kbd></a>&ensp;&ensp;
+<a href="#keymaps"><kbd> <br> Keymaps <br> </kbd></a>&ensp;&ensp;
+<a href="#contributing"><kbd> <br> Contributing <br> </kbd></a>&ensp;&ensp;
+<a href="#postscript"><kbd> <br> Postscript <br> </kbd></a>&ensp;&ensp;
+
+</div><br><br>
+
 
 https://github.com/user-attachments/assets/c0b4f31c-e72c-4277-ab12-3f34e304b2f6
 
@@ -43,7 +60,7 @@ https://github.com/user-attachments/assets/c0b4f31c-e72c-4277-ab12-3f34e304b2f6
         ├── alpha.lua           # dashboard
         ├── blink.lua           # completions
         ├── bufferline.lua      # buffer tabs
-        ├── colorscheme.lua     # colorscheme (koda.nvim & catppuccin too but it is commented out )
+        ├── colorscheme.lua     # colorscheme (koda.nvim & catppuccin too but its commented out)
         ├── fzf.lua             # fuzzy finder
         ├── mason.lua           # LSP server management
         ├── mini.lua            # mini.nvim modules
