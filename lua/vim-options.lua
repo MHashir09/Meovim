@@ -5,6 +5,7 @@
 local o = vim.opt
 o.number = true -- enables line numbers
 o.relativenumber = false -- disables relative line numbers
+o.wildmenu = false -- disables commandline completions because its annoying
 o.clipboard = "unnamedplus" -- this makes every yank/paste automatically use the system clipboard, links ' " ' to ' + ' register
 o.signcolumn = "yes:1" -- reserves a fixed column on the left for signs
 o.termguicolors = true -- enables 24-bit RGB colors instead of the terminal's 256-color palette
