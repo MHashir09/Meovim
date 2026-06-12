@@ -19,14 +19,19 @@ return {
                 "html",
                 "cssls",
                 "lua_ls",
-                "emmet_ls",
+                "emmet_language_server",
                 "pyright",
                 "ts_ls",
                 "rust_analyzer",
-                "eslint",       -- linter for js/ts/html/css
-                "ruff",         -- linter for python
+                "eslint", -- linter for js/ts/html/css
+                "ruff",   -- linter for python
             },
             automatic_installation = true,
+        })
+
+        -- // Pass blink.cmp capabilities to all LSP servers for proper completion support // --
+        vim.lsp.config("*", {
+            capabilities = require("blink.cmp").get_lsp_capabilities(),
         })
 
         vim.lsp.enable({
@@ -35,7 +40,7 @@ return {
             "html",
             "cssls",
             "lua_ls",
-            "emmet_ls",
+            "emmet_language_server",
             "pyright",
             "ts_ls",
             "rust_analyzer",

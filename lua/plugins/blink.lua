@@ -6,7 +6,19 @@ return {
     event = "InsertEnter", -- load when entering insert mode
     config = function()
         require('blink.cmp').setup({
-            fuzzy = { implementation = 'prefer_rust_with_warning' }, -- faster rust fuzzy matcher, needs cargo
+            fuzzy = {
+                implementation = 'prefer_rust_with_warning', -- faster rust fuzzy matcher, needs cargo
+                sorts = {
+                    function(a, b)
+                        if (a.client_name == nil or b.client_name == nil) or (a.client_name == b.client_name) then
+                            return
+                        end
+                        return b.client_name == 'emmet_language_server' or b.client_name == 'emmet-language-server'
+                    end,
+                    'score',
+                    'sort_text',
+                },
+            },
             signature = { enabled = true }, -- shows function signature as you type arguments
             keymap = {
                 preset = "default",
