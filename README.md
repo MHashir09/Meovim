@@ -123,7 +123,7 @@ The following LSP servers are installed and enabled automatically via Mason:
 | `ts_ls` | TypeScript / JavaScript |
 | `html` | HTML |
 | `cssls` | CSS |
-| `emmet_ls` | HTML / CSS abbreviations |
+| `emmet_language_server` | HTML / CSS abbreviations |
 | `pyright` | Python |
 | `ruff` | Python (linting) |
 | `rust_analyzer` | Rust |
